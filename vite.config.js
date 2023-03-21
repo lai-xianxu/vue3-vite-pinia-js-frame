@@ -65,28 +65,14 @@ export default defineConfig(({ command, mode }) => {
           chunkFileNames: 'assets/js/[name]-[hash].js',
           entryFileNames: 'assets/js/[name]-[hash].js',
           assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
-          // manualChunks: {
-          //   // 将 node_modules 中的 element-plus 依赖单独打包
-          //   vendor: [
-          //     'element-plus',
-          //   ]
-          // },
-          // 将以下三方依赖单独打包
-          // manualChunks: {
-          //   "element-plus": ["element-plus"],
-          //   echarts: ["echarts"],
-          //   "ant-design-vue": ["ant-design-vue"],
-          //   zrender: ["zrender"],
-          // },
           // 将node_modules三方依赖包最小化拆分
           manualChunks(id) {
             if (id.includes('node_modules')) {
               const paths = id.toString().split('node_modules/');
-              console.log(paths, 'paths');
               if (paths[2]) {
-                return id.toString().split('node_modules/')[2].split('/')[0].toString();
+                return paths[2].split('/')[0].toString();
               }
-              return id.toString().split('node_modules/')[1].split('/')[0].toString();
+              return paths[1].split('/')[0].toString();
             }
           },
         },
