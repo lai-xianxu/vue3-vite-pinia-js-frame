@@ -1,10 +1,10 @@
 {
-  "emit-v3-js": {
-    "prefix": "emit-v3",
+  "vue3-emits-js": {
+    "prefix": "v3-emit",
     "body": [
       "const emit = defineEmits(['update:modelValue']);",
       "emit('update:modelValue', false);"
     ],
-    "description": "emit-v3-js"
+    "description": "vue3-emits-js"
   }
 }

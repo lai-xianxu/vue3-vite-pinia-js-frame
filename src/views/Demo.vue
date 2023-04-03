@@ -3,11 +3,12 @@
 </template>
 
 <script setup>
+import { computed, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { watch, ref, computed } from 'vue';
-import { useDemoStore } from '@/store/modules/demo';
+
 import { postAppLogin } from '@/api/demo';
 import useJudgePcOrApp from '@/hooks/useJudgePcOrApp';
+import { useDemoStore } from '@/store/modules/demo';
 
 /* props demo */
 const props = defineProps({

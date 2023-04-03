@@ -8,7 +8,7 @@ module.exports = defineConfig({
     jest: true,
     es6: true,
   },
-  plugins: ['vue'],
+  plugins: ['vue', 'simple-import-sort'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -78,7 +78,21 @@ module.exports = defineConfig({
     // 强制一致地使用 function 声明或表达式
     'func-style': 0,
     // 强制一行的最大长度
-    'max-len': 0,
+    'max-len': [
+      'error',
+      {
+        code: 80,
+        comments: 80,
+        // 忽略注释
+        ignoreUrls: true,
+        // 忽略字符串
+        ignoreStrings: true,
+        // 忽略模板字符串
+        ignoreTemplateLiterals: true,
+        // 忽略正则表达式
+        ignoreRegExpLiterals: true,
+      },
+    ],
     // 要求 return 语句要么总是指定返回的值，要么不指定
     'consistent-return': 0,
     // 强制switch要有default分支
@@ -93,5 +107,11 @@ module.exports = defineConfig({
     'prefer-destructuring': ['error', { object: true, array: false }],
     // 关闭组件名称校验
     'vue/multi-word-component-names': 'off',
+    // 关闭函数返回值类型的警告
+    'simple-import-sort/imports': 'error',
+    // 关闭函数返回值类型的警告
+    'simple-import-sort/exports': 'error',
+    // 关闭 Promise 构造函数中的执行器函数是否返回了值
+    'no-promise-executor-return': 0,
   },
 });

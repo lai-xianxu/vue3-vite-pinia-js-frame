@@ -3,7 +3,16 @@
  */
 const useJudgePcOrApp = () => {
   const userAgentInfo = navigator.userAgent;
-  const agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod', 'BlackBerry', 'webOS'];
+  const agents = [
+    'Android',
+    'iPhone',
+    'SymbianOS',
+    'Windows Phone',
+    'iPad',
+    'iPod',
+    'BlackBerry',
+    'webOS',
+  ];
   const flag = agents.find((e) => userAgentInfo.indexOf(e) === -1);
   return flag ? 'H5' : 'PC';
 };

@@ -55,5 +55,7 @@ export const clearSessionStorage = (key) => {
  * @param value
  */
 export const isPC = () => {
-  return !/Android|webOS|iPhone|iPod|BlackBerry|SymbianOS|iPad|Windows Phone/i.test(navigator.userAgent);
+  return !/Android|webOS|iPhone|iPod|BlackBerry|SymbianOS|iPad|Windows Phone/i.test(
+    navigator.userAgent,
+  );
 };

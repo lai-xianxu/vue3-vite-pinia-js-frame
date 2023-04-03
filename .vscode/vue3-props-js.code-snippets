@@ -1,6 +1,6 @@
 {
-  "props-v3-js": {
-    "prefix": "props-v3",
+  "vue3-props-js": {
+    "prefix": "v3-props",
     "body": [
       "const props = defineProps({",
       "  modelValue: {",
@@ -9,6 +9,6 @@
       "  },",
       "});"
     ],
-    "description": "props-v3"
+    "description": "vue3-props-js"
   }
 }

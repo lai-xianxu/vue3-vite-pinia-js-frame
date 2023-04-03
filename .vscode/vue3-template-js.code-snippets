@@ -1,6 +1,6 @@
 {
   "vue3-template-js": {
-    "prefix": "vue3-template",
+    "prefix": "v3-template",
     "body": [
       "<template>",
       "  ",

@@ -1,6 +1,7 @@
-import { defineConfig, loadEnv, normalizePath } from 'vite';
 import { resolve } from 'path';
-import { getPluginsList } from './src/utils/plugins';
+import { defineConfig, loadEnv, normalizePath } from 'vite';
+
+import { getPluginsList } from './build/plugins';
 
 // 全局 scss 文件的路径
 // 用 normalizePath 解决 window 下的路径问题

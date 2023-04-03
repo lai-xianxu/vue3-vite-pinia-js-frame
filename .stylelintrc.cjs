@@ -17,23 +17,7 @@ module.exports = {
     // 禁止字体族中缺少泛型族关键字
     'font-family-no-missing-generic-family-keyword': null,
     // 禁止未知的@规则
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: [
-          'tailwind',
-          'apply',
-          'variants',
-          'responsive',
-          'screen',
-          'function',
-          'if',
-          'each',
-          'include',
-          'mixin',
-        ],
-      },
-    ],
+    'at-rule-no-unknown': null,
     // 不允许未知函数
     'function-no-unknown': null,
     // 不允许未知单位

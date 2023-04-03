@@ -1,6 +1,6 @@
 {
-  "watch-v3-js": {
-    "prefix": "watch-v3",
+  "vue3-watch-js": {
+    "prefix": "v3-watch",
     "body": [
       "watch(",
       "  () => props.modelValue,",
@@ -12,6 +12,6 @@
       "  },",
       ");"
     ],
-    "description": "watch-v3-js"
+    "description": "vue3-watch-js"
   }
 }

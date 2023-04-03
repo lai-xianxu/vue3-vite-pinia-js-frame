@@ -14,12 +14,14 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-  scrollBehavior() {
-    return {
-      el: '#app',
-      top: 0,
-      behavior: 'smooth',
-    };
+  scrollBehavior(to, from, savedPosition) {
+    // 新页面滚动行为
+    return new Promise((resolve) => {
+      if (savedPosition) {
+        return savedPosition;
+      }
+      resolve({ left: 0, top: 0, behavior: 'smooth' });
+    });
   },
 });
 

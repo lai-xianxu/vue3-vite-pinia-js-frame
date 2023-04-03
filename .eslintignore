@@ -1,5 +1,5 @@
 dist
 node_modules
-!.prettierrc.js
+!.prettierrc.cjs
 components.d.ts
 auto-imports.d.ts

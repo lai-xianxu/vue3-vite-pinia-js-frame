@@ -1,0 +1,16 @@
+{
+  "vue3-model-js": {
+    "prefix": "v3-model",
+    "body": [
+      "/* v-model */",
+      "let visible = ref(false);",
+      "watchEffect(() => {",
+      "  if (props.modelValue) visible.value = props.modelValue;",
+      "});",
+      "watchEffect(() => {",
+      "  if (!visible.value) emit(\"update:modelValue\", visible.value);",
+      "});"
+    ],
+    "description": "vue3-model-js"
+  }
+}

@@ -1,5 +1,5 @@
-import Demo from '@/views/Demo.vue';
 import * as directives from '@/utils/directives';
+import Demo from '@/views/Demo.vue';
 
 export default {
   install(Vue) {
